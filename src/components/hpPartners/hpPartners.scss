@@ -1,5 +1,8 @@
 .hpPartners {
   padding-bottom: 80px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 40px;
+  }
   &__title {
     font-size: 32px;
     line-height: 1.25;
@@ -10,6 +13,10 @@
     font-family: "Playfair Display", serif;
     font-weight: 700;
     letter-spacing: 0.75px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+      font-size: 24px;
+    }
   }
 
   &__item {

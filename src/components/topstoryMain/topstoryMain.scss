@@ -8,6 +8,9 @@
     display: flex;
     gap: 24px;
     text-decoration: none;
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+    }
     &:hover {
       img {
         transform: scale(1.1);
@@ -35,10 +38,16 @@
     margin-bottom: 16px;
     font-family: "Playfair Display", serif;
     letter-spacing: 1.5px;
+    @include media-breakpoint-down(lg) {
+      font-size: 32px;
+    }
   }
   &__info {
     max-width: 21rem;
     padding-top: 8px;
+    @include media-breakpoint-down(xl) {
+      max-width: 100%;
+    }
     span {
       display: block;
       color: var(--color-violet-600);
@@ -54,6 +63,9 @@
   aspect-ratio: 950/120;
   height: auto;
   margin-bottom: 40px;
+  @include media-breakpoint-down(lg) {
+    //  aspect-ratio: 351/177;
+  }
   img {
     width: 100%;
     height: 100%;

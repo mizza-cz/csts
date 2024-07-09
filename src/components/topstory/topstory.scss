@@ -18,6 +18,9 @@
       line-height: 1.25;
       color: var(--color-light);
       margin-bottom: 16px;
+      @include media-breakpoint-down(lg) {
+        font-size: 24px;
+      }
     }
     span {
       display: block;

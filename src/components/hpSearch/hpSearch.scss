@@ -1,5 +1,8 @@
 .hpSearch {
   margin-bottom: 80px;
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 32px;
+  }
   &-wrapper {
     background-image: url("../images/content/bg-search.jpg");
     background-repeat: no-repeat;
@@ -18,6 +21,9 @@
     margin: 0 auto 40px;
     text-align: center;
     color: var(--color-light);
+    @include media-breakpoint-down(lg) {
+      font-size: 32px;
+    }
   }
 }
 
@@ -31,6 +37,21 @@
   align-items: center;
   width: max-content;
   gap: 8px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    background-image: url("../images/ico/map-pin.svg");
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
   &__input {
     height: 64px;
     width: 452px;
@@ -55,6 +76,9 @@
     cursor: pointer;
     transition: all 0.3s;
     border-radius: 16px;
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
     &:hover {
       background-color: var(--color-violet-600);
     }

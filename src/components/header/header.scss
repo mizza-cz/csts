@@ -2,6 +2,20 @@
   position: relative;
   z-index: 2;
   margin: 0 auto;
+  .header-top__links {
+    display: none;
+    @include media-breakpoint-down(xxl) {
+      flex-direction: column;
+      display: flex;
+      background-color: var(--color-violet-950);
+      margin: 0;
+      width: 100%;
+      padding: 24px;
+      align-items: flex-start;
+      gap: 16px;
+      padding-bottom: 100px;
+    }
+  }
   &__social {
     display: flex;
     justify-content: flex-end;
@@ -10,6 +24,16 @@
     right: 40px;
     top: 0;
     bottom: 0;
+    @include media-breakpoint-down(xxl) {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      justify-content: flex-start;
+      margin: 0;
+      left: 0;
+      padding-left: 24px;
+      padding-bottom: 24px;
+    }
   }
   &__logo {
     display: block;
@@ -68,7 +92,7 @@
   align-items: center;
   position: relative;
   @media (max-width: 1720px) {
-    padding-right: 24px;
+    padding-right: 16px;
   }
 
   &__links {
@@ -105,8 +129,9 @@
     align-items: center;
     margin-left: 9.9rem;
     @media (max-width: 1720px) {
-      margin-left: 6rem;
+      margin-left: auto;
     }
+
     a {
       color: var(--color-light);
       display: block;
@@ -151,9 +176,15 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 40px;
+  flex-wrap: wrap;
   @media (max-width: 1720px) {
-    flex-direction: column;
     margin-right: 0;
+  }
+  @include media-breakpoint-down(xxl) {
+    flex-direction: column;
+    position: relative;
+    z-index: 9999;
+    width: 100%;
   }
 }
 .navbar-collapse {
@@ -161,12 +192,12 @@
   align-items: center;
   position: relative;
   z-index: 99;
-  @media (max-width: 1720px) {
+  @include media-breakpoint-down(xxl) {
     background-color: var(--color-violet-600);
     position: absolute;
-    top: 0px;
-    right: 0;
-    z-index: 99;
+    top: 100%;
+    right: -16px;
+    z-index: 99999;
     width: 100%;
     padding: 1rem 0;
     opacity: 0;
@@ -174,27 +205,99 @@
     flex-direction: column;
     transition: opacity 0.3s, visibility 0.3s;
     flex-wrap: wrap;
-    padding-bottom: 20px;
     padding-top: 32px;
+    min-width: 320px;
+    padding-bottom: 0;
+    max-width: 340px;
+  }
+  @include media-breakpoint-down(md) {
+    width: calc(100% + 32px) !important;
+    max-width: calc(100% + 32px) !important;
   }
 }
 .is-nav-open .navbar-collapse {
-  @media (max-width: 1720px) {
+  @include media-breakpoint-down(xxl) {
     visibility: visible;
     opacity: 1;
     display: flex;
-    z-index: 999;
+
+    z-index: 999999;
   }
 }
 .nav-item {
   padding-top: 24px;
   padding-bottom: 24px;
+  @include media-breakpoint-down(xxl) {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+  }
+  &--search {
+    @include media-breakpoint-down(xxl) {
+      display: none;
+    }
+  }
+}
+.navbar-searchMobile {
+  display: none;
+  border: none;
+  margin-top: 28px;
+  margin-bottom: 32px;
+  width: 100%;
+  padding: 0 24px;
+  &__form {
+    background-color: var(--color-violet-50);
+    border-radius: 16px;
+    overflow: hidden;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding-left: 16px;
+    outline: none;
+    color: var(--color-violet-950);
+    &:placeholder {
+      color: var(--color-violet-950);
+    }
+  }
+  button {
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: none;
+    }
+    svg g path:nth-child(2) {
+      stroke: var(--color-violet-950);
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    display: block;
+  }
 }
 .nav-item + .nav-item {
   padding-left: 28px;
   margin-left: 16px;
   position: relative;
-
+  @media (max-width: 1720px) {
+    padding-left: 24px;
+  }
+  @include media-breakpoint-down(xxl) {
+    margin-left: 0;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -205,6 +308,9 @@
     background-image: url("../images/ico/separator-dark.svg");
     background-size: cover;
     background-repeat: no-repeat;
+    @include media-breakpoint-down(xxl) {
+      display: none;
+    }
   }
 }
 .nav-link {
@@ -217,6 +323,12 @@
   text-decoration-color: transparent;
   transition: all 0.3s;
   letter-spacing: 0.5px;
+  @include media-breakpoint-down(xxl) {
+    width: 100%;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
   &:hover {
     text-decoration-color: inherit;
     color: var(--color-light);
@@ -235,7 +347,6 @@
   }
 }
 .c-header__opener {
-  padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -247,20 +358,18 @@
   position: relative;
   color: var(--color-light);
   text-transform: uppercase;
-  margin-left: auto;
   margin-right: 8px;
   z-index: 999;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @include media-breakpoint-down(sm) {
-    padding: 0.25rem 0;
-  }
+  padding: 16px 4px 16px 20px;
+  margin: 0;
+  border-left: 1px solid var(--color-violet-950);
+  width: fit-content;
+
   span {
     transition: all 0.3s;
     width: 24px;
     height: 24px;
     display: block;
-    margin-left: 16px;
     background-image: url("../images/ico/menu.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -268,7 +377,17 @@
   &:focus {
     box-shadow: none;
   }
-
+}
+.c-header__opener.is-open {
+  span {
+    background-image: url("../images/ico/close.svg");
+    background-repeat: no-repeat;
+  }
+}
+.headerMobile__btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   @include media-breakpoint-only(xxl) {
     display: none;
   }
@@ -276,9 +395,44 @@
     display: none;
   }
 }
-.c-header__opener.is-open {
-  span {
-    background-image: url("../images/ico/close.svg");
-    background-repeat: no-repeat;
+
+.c-header__openerNews {
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--color-light);
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  gap: 4px;
+  height: 100%;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.is-openNew {
+  .menuNews {
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-violet-50);
+    right: 0;
+    min-width: 320px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  .menuNewsBtn {
+    display: flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 999;
   }
 }

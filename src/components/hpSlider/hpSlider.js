@@ -7,10 +7,19 @@ $(".hpSlider__inner").slick({
     ' <button class="hpSlider__btn  hpSlider__btnnext"><img src="images/ico/arrow-left.svg" loading="lazy" alt="" /></button>',
   responsive: [
     {
-      breakpoint: 1238,
+      breakpoint: 1280,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        
       },
     },
   ],

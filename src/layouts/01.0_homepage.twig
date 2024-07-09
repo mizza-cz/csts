@@ -1,0 +1,66 @@
+{% extends "@components/base/base.twig" %} {% set title = "01.0_homepage" %} {%
+block main %}
+<div class="base__wrapper base__wrapper--homepage">
+  <div class="row">
+    <div class="col-xxl-8">
+      <div class="header-top">
+        <a href="#" class="header__logo">
+          <img src="images/ico/logo.svg" alt="logo" />
+        </a>
+        <ul class="header-top__list">
+          <li>
+            <a href="#">ČESKÝ SVAZ TANEČNÍHO SPORTU</a>
+          </li>
+
+          <li>
+            <a href="#">ČLEN ČOV</a>
+          </li>
+        </ul>
+        <ul class="header-top__links">
+          <li>
+            <a href="#"><img src="images/ico/home.svg" alt="CSTS" /> CSTS.CZ</a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/ico/heart.svg" alt="INZERCE" /> INZERCE</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/shop.svg" alt="E-SHOP" /> E-SHOP
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/trophy.svg" alt="SOUTĚŽE A VÝSLEDKY" />
+              SOUTĚŽE A VÝSLEDKY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xxl-4 bg-violet-50"></div>
+    <div class="col-12">{% include "@components/header/header.twig" %}</div>
+    <div class="col-xxl-8">
+      <div class="base__content">
+        {% include "@components/topstoryMain/topstoryMain.twig" %}
+        <a href="#" target="_blank" class="topstoryBan">
+          <img src="https://placehold.co/950x120" alt="ban" loading="lazy" />
+        </a>
+        {% include "@components/topstory/topstory.twig" %}
+      </div>
+    </div>
+    <div class="col-xxl-4 bg-violet-50">
+      {% include "@components/menuNews/menuNews.twig" %}
+    </div>
+  </div>
+</div>
+<main class="main" aria-label="Hlavní obsah">
+  {% include "@components/hpSearch/hpSearch.twig" %} {% include
+  "@components/hpBans/hpBans.twig" %} {% include
+  "@components/hpYouTube/hpYouTube.twig" %} {% include
+  "@components/hpSlider/hpSlider.twig" %} {% include
+  "@components/hpPartners/hpPartners.twig" %}
+</main>
+
+{% endblock %}

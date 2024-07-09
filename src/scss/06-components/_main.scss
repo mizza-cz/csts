@@ -1,0 +1,7 @@
+.main {
+  background-color: var(--color-light);
+  padding-top: 60px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 32px;
+  }
+}

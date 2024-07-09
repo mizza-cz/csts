@@ -1,0 +1,31 @@
+.tag {
+  display: block;
+  padding: 2px 12px 0;
+  font-size: 12px;
+  top: 0;
+  left: 0;
+  color: var(--color-light);
+  text-transform: uppercase;
+  line-height: 1.25;
+  width: fit-content;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+.tag--pink {
+  background-color: var(--color-pink-600);
+}
+.tag--orange {
+  background-color: var(--color-orange-600);
+}
+.tag--red {
+  background-color: var(--color-red-600);
+}
+
+.tag--teal {
+  background-color: var(--color-teal-600);
+}
+
+.tag--blue {
+  background-color: var(--color-blue-600);
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 19</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Článek---Desktop" transform="translate(-748, -3352)">
+            <g id="Group-19" transform="translate(748, 3352)">
+                <rect id="Rectangle" fill="#DC2626" x="0" y="0" width="96" height="96"></rect>
+                <g id="player-play" transform="translate(24, 24)">
+                    <polygon id="Path" points="0 0 48 0 48 48 0 48"></polygon>
+                    <path d="M11.9999999,8 L11.9999999,40 C11.9999999,40.7246241 12.3915556,41.3926796 13.0240491,41.7462783 C13.6565426,42.099877 14.4308244,42.0837031 15.048,41.704 L41.048,25.704 C41.6401279,25.3401459 42.0009164,24.6949858 42.0009164,24 C42.0009164,23.3050142 41.6401279,22.6598541 41.048,22.296 L15.048,6.296 C14.4308244,5.91629695 13.6565426,5.90012298 13.0240491,6.2537217 C12.3915556,6.60732043 11.9999999,7.27537594 11.9999999,8 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

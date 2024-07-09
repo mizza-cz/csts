@@ -1,0 +1,32 @@
+/*! purgecss start ignore */
+.container {
+  max-width: 87.7rem !important;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.g-5,
+.gy-5 {
+  --bs-gutter-y: 40px !important;
+  @include media-breakpoint-down(xxl) {
+    --bs-gutter-y: 24px !important;
+  }
+}
+.g-5,
+.gx-5 {
+  --bs-gutter-x: 40px !important;
+  @include media-breakpoint-down(xxl) {
+    --bs-gutter-x: 24px !important;
+  }
+}
+.col-xxl-8 {
+  @media (min-width: 97.5em) {
+    flex: 0 0 auto;
+    width: 66.66667%;
+  }
+}
+.my-5 {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+/*! purgecss end ignore */

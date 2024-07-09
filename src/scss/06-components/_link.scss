@@ -1,0 +1,17 @@
+.link {
+  display: block;
+  width: fit-content;
+  color: var(--color-light);
+  font-size: 14px;
+  line-height: 1.571;
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: 2px solid var(--color-violet-600);
+  background-color: var(--color-violet-950);
+  padding: 9px 12px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  &:hover {
+    background-color: var(--color-violet-600);
+  }
+}

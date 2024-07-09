@@ -1,0 +1,70 @@
+.base {
+  background-color: var(--color-violet-950);
+  background-image: url("../images/content/bg-decore.png");
+  background-size: 1200px;
+  background-position: left top;
+  opacity: 1;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     width: 10%;
+  //     height: 100%;
+  //     left: 0;
+  //     top: 0;
+  //     opacity: 1;
+  //     background-image: linear-gradient(
+  //       90deg,
+  //       rgba(124, 58, 237, 0.1) 10%,
+  //       rgba(46, 16, 101, 1) 100%
+  //     );
+  //   }
+  &__wrapper {
+    position: relative;
+    max-width: 128rem;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1200px;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__wrapper .container {
+    padding: 0 !important;
+  }
+  &__content {
+    position: relative;
+    z-index: 5;
+    padding-right: 24px;
+    max-width: 64rem;
+    margin-left: auto;
+    @include media-breakpoint-down(xxl) {
+      max-width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+
+.bg-violet-950 {
+  background-color: var(--color-violet-950);
+}
+.bg-violet-50 {
+  background-color: var(--color-violet-50);
+  position: relative;
+  z-index: 999;
+  &::before {
+    content: "";
+    position: absolute;
+    right: -1000%;
+    width: 1000%;
+    background-color: var(--color-violet-50);
+    height: 100%;
+  }
+}

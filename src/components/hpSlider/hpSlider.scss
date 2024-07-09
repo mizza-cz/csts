@@ -1,0 +1,84 @@
+.hpSlider {
+  max-width: 128rem;
+  margin: 0 auto;
+  &__item {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 510/340;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .h3 {
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--color-light);
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 3;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 112px;
+      z-index: 2;
+      opacity: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(46, 16, 101, 0) 0%,
+        rgba(46, 16, 101, 1) 100%
+      );
+    }
+  }
+  &__btn {
+    position: absolute;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    background: transparent;
+    width: 72px;
+    height: 72px;
+    background: rgba(#fff, 0.26);
+    border-radius: 50%;
+    padding: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__btnnext {
+    left: 24px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__btnprev {
+    right: 24px;
+    transform: rotate(-180deg);
+    &:hover {
+      transform: rotate(-180deg) scale(1.1);
+    }
+  }
+}

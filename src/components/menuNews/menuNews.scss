@@ -1,0 +1,42 @@
+.menuNews {
+  padding-left: 32px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  max-width: 290px;
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    line-height: 1.25;
+    color: var(--color-dark);
+    letter-spacing: 1px;
+  }
+  &__item {
+    border-top: 1px solid var(--color-violet-200);
+    padding-top: 24px;
+    margin-top: 24px;
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--color-dark);
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    p {
+      display: block;
+      font-size: 14px;
+      line-height: 1.571;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+      a {
+        color: var(--color-violet-950);
+      }
+    }
+    span {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--color-violet-950);
+    }
+  }
+}

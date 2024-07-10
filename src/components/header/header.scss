@@ -416,7 +416,7 @@
 
 .is-openNew {
   .menuNews {
-    display: block;
+    display: block !important;
     position: fixed;
     top: 0;
     background-color: var(--color-violet-50);
@@ -426,6 +426,7 @@
     padding-right: 24px;
     overflow-y: scroll;
     height: 100vh;
+    z-index: 999;
   }
   .menuNewsBtn {
     display: flex;

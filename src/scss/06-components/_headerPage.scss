@@ -1,0 +1,9 @@
+.headerPage {
+  padding: 40px 0;
+  @include media-breakpoint-down(lg) {
+    padding: 28px 0;
+  }
+  .h1 {
+    color: var(--color-light);
+  }
+}

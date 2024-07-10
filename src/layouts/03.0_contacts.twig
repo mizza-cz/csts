@@ -1,4 +1,4 @@
-{% extends "@components/base/base.twig" %} {% set title = "02.0_article" %} {%
+{% extends "@components/base/base.twig" %} {% set title = "03.0_contact" %} {%
 block main %}
 <div class="base__wrapper">
   <div class="row">
@@ -42,10 +42,14 @@ block main %}
     <div class="col-12">{% include "@components/header/header.twig" %}</div>
     {% include "@components/menuNews/menuNews-2.twig" %}
   </div>
-  {% include "@components/article/article.twig" %}
+  <div class="container">
+    <div class="headerPage">
+      <h1 class="h1">Kontakt</h1>
+    </div>
+  </div>
 </div>
 <main class="main" aria-label="Hlavní obsah">
-  {% include "@components/article-detail/article-detail.twig" %}
+  {% include "@components/contacts-section/contacts-section.twig" %}
 </main>
 
 {% endblock %}

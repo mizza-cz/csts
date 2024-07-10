@@ -43,14 +43,14 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.75;
-    margin: 0px 0 24px;
+    margin: 32px 0;
     > li {
       position: relative;
       padding-left: 18px;
       border-bottom: 1px solid var(--color-slate-200);
       padding-bottom: 8px;
       margin-bottom: 8px;
-      &::before {
+      aP &::before {
         content: "";
         background-color: var(--color-violet-950);
         position: absolute;
@@ -85,16 +85,18 @@
     font-weight: 400;
     line-height: 28px;
 
-    margin: 24px 0;
+    margin: 32px 0;
     counter-reset: item;
 
     > li {
       counter-increment: item;
       position: relative;
-      padding-left: 32px;
+      border-bottom: 1px solid var(--color-slate-200);
+      padding-bottom: 8px;
+      padding-left: 28px;
       &::before {
         content: counter(item) ")";
-        color: var(--color-primary);
+        color: var(--color-violet-950);
         font-weight: 700;
         position: absolute;
         top: 0;
@@ -106,6 +108,13 @@
           &::before {
             content: counter(item) ".";
           }
+        }
+      }
+      a {
+        text-decoration-color: transparent;
+        color: var(--color-violet-950);
+        &:hover {
+          text-decoration-color: inherit;
         }
       }
     }

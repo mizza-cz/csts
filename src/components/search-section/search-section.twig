@@ -1,0 +1,98 @@
+<section class="search-section">
+  <div class="container">
+    <div class="search-section__header">
+      <form action="" class="hpSearch-form">
+        <input
+          type="text"
+          class="hpSearch-form__input"
+          placeholder="Zadej název tvého města nebo obce"
+        />
+        <button class="hpSearch-form__btn">Vyhledat</button>
+      </form>
+      <a class="search-section__link" href="#">
+        Databáze klubů {% include "@images/arrow-right.svg" %}
+      </a>
+    </div>
+  </div>
+  <div class="map-wrapper">
+    <div class="map" id="map-canvas"></div>
+  </div>
+  <div class="container">
+    <div class="search-section__table">
+      <table>
+        <thead>
+          <tr>
+            <th>Název klubu</th>
+            <th>ADRESA</th>
+            <th>VZDÁLENOST OD BYDLIŠTĚ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#">TK Rokaso Uherské Hradiště z.s.</a></td>
+            <td>Pivovarská 488, 686 01, Uherské Hradiště</td>
+            <td><strong>2,5 km</strong></td>
+          </tr>
+          <tr>
+            <td><a href="#">Dance Studio Starlight, z.s.</a></td>
+            <td>Jateční 169, 760 01, Zlín</td>
+            <td><strong>6,4 km</strong></td>
+          </tr>
+          <tr>
+            <td><a href="#">KST Swing Kroměříž</a></td>
+            <td>Příčná 151, 767 01 Kroměříž</td>
+            <td><strong>16,3 km</strong></td>
+          </tr>
+          <tr>
+            <td><a href="#">iDance Studio</a></td>
+            <td>Podlesí IV 5302A, 760 05, Zlín</td>
+            <td><strong>17,6 km</strong></td>
+          </tr>
+          <tr>
+            <td><a href="#">Taneční formace Starlet Brno</a></td>
+            <td>U Jánečka 226, 664 34 Moravské Knínice</td>
+            <td><strong>23,9 km</strong></td>
+          </tr>
+          <tr>
+            <td><a href="#">Taneční klub FOKUS Nový Jičín</a></td>
+            <td>Divadlení 949/11, 741 01 Nový Jičín</td>
+            <td><strong>25,7 km</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+  var mapVars = {
+    center: {
+      lat: 50.054528570735,
+      lon: 14.544433056556,
+    },
+    zoom: 6,
+    centerMap: false,
+    markers: [
+      {
+        type: "school",
+        lat: 50.054528570735,
+        lon: 14.544433056556,
+        name: "HBC Hostivař",
+        link: "",
+      },
+      {
+        type: "preschool",
+        lat: 51.054528570735,
+        lon: 14.54,
+        name: "HBC Hostivař",
+        link: "",
+      },
+      {
+        lat: 50.0545,
+        lon: 15.544433056556,
+        name: "HBC Hostivař",
+        link: "",
+      },
+    ],
+  };
+</script>

@@ -1,179 +1,116 @@
-$(document).ready(function () {
-  var latlng = new google.maps.LatLng(mapVars.center.lat, mapVars.center.lon);
-  var wasFullScreen = false;
+google.maps.event.addDomListener(window, "load", initMap);
 
-  // Creating an object literal containing the properties we want to pass to the map
-  var options = {
-    zoom: mapVars.zoom, // This number can be set to define the initial zoom level of the map
-    center: latlng,
-    scrollwheel: false,
+function initMap() {
+  let mapOptions = {
+    zoom: 10,
+
+    center: new google.maps.LatLng(50.0595854, 14.3255421),
+
     styles: [
       {
-        featureType: "administrative",
-        elementType: "all",
-        stylers: [{ saturation: "-100" }],
-      },
-      {
-        featureType: "administrative.province",
-        elementType: "all",
-        stylers: [{ visibility: "off" }],
-      },
-      {
         featureType: "landscape",
-        elementType: "all",
         stylers: [
+          { hue: "#FFBB00" },
+          { saturation: 43.400000000000006 },
+          { lightness: 37.599999999999994 },
+          { gamma: 1 },
+        ],
+      },
+      {
+        featureType: "road.highway",
+        stylers: [
+          { hue: "#FFC200" },
+          { saturation: -61.8 },
+          { lightness: 45.599999999999994 },
+          { gamma: 1 },
+        ],
+      },
+      {
+        featureType: "road.arterial",
+        stylers: [
+          { hue: "#FF0300" },
           { saturation: -100 },
-          { lightness: 65 },
-          { visibility: "on" },
+          { lightness: 51.19999999999999 },
+          { gamma: 1 },
+        ],
+      },
+      {
+        featureType: "road.local",
+        stylers: [
+          { hue: "#FF0300" },
+          { saturation: -100 },
+          { lightness: 52 },
+          { gamma: 1 },
+        ],
+      },
+      {
+        featureType: "water",
+        stylers: [
+          { hue: "#0078FF" },
+          { saturation: -13.200000000000003 },
+          { lightness: 2.4000000000000057 },
+          { gamma: 1 },
         ],
       },
       {
         featureType: "poi",
-        elementType: "all",
         stylers: [
-          { saturation: -100 },
-          { lightness: "50" },
-          { visibility: "simplified" },
+          { hue: "#00FF6A" },
+          { saturation: -1.0989010989011234 },
+          { lightness: 11.200000000000017 },
+          { gamma: 1 },
         ],
       },
-      {
-        featureType: "road",
-        elementType: "all",
-        stylers: [{ saturation: "-100" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "all",
-        stylers: [{ visibility: "simplified" }],
-      },
-      {
-        featureType: "road.arterial",
-        elementType: "all",
-        stylers: [{ lightness: "30" }],
-      },
-      {
-        featureType: "road.local",
-        elementType: "all",
-        stylers: [{ lightness: "40" }],
-      },
-      {
-        featureType: "transit",
-        elementType: "all",
-        stylers: [{ saturation: -100 }, { visibility: "simplified" }],
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }],
-      },
-      {
-        featureType: "water",
-        elementType: "labels",
-        stylers: [{ lightness: -25 }, { saturation: -100 }],
-      },
     ],
-    mapTypeId: google.maps.MapTypeId.ROADMAP, // This value can be set to define the map type ROADMAP/SATELLITE/HYBRID/TERRAIN
   };
 
-  // Calling the constructor, thereby initializing the map
-  var map = new google.maps.Map(document.getElementById("map-canvas"), options);
+  let mapElement = document.getElementById("map-canvas");
+  let map = new google.maps.Map(mapElement, mapOptions);
 
-  // Define Marker properties
-  var imageclub = new google.maps.MarkerImage(
-    "/images/ico/marker-orange.svg",
-    // This marker is 129 pixels wide by 42 pixels tall.
-    new google.maps.Size(30, 45),
-    // The origin for this image is 0,0.
-    new google.maps.Point(0, 0),
-    // The anchor for this image is the base of the flagpole at 18,42.
-    new google.maps.Point(18, 42)
-  );
-  var imageschool = new google.maps.MarkerImage(
-    "/images/ico/marker-blue.svg",
-    // This marker is 129 pixels wide by 42 pixels tall.
-    new google.maps.Size(30, 45),
-    // The origin for this image is 0,0.
-    new google.maps.Point(0, 0),
-    // The anchor for this image is the base of the flagpole at 18,42.
-    new google.maps.Point(18, 42)
-  );
-  var imagepreschool = new google.maps.MarkerImage(
-    "/images/ico/marker-red.svg",
-    // This marker is 129 pixels wide by 42 pixels tall.
-    new google.maps.Size(30, 45),
-    // The origin for this image is 0,0.
-    new google.maps.Point(0, 0),
-    // The anchor for this image is the base of the flagpole at 18,42.
-    new google.maps.Point(18, 42)
-  );
+  const iconBase = "images/ico/";
+  const icons = {
+    info: {
+      icon: {
+        url: iconBase + "pin.svg",
+        scaledSize: new google.maps.Size(48, 48), // Adjust the size as needed
+      },
+    },
+  };
 
-  var windows = [];
-  var latlngbounds = new google.maps.LatLngBounds();
-  latlngbounds.extend(latlng);
-
-  for (var i = 0; i < mapVars.markers.length; i++) {
-    var icon = imageclub;
-
-    if (mapVars.markers[i].type === "school") {
-      icon = imageschool;
-    } else if (mapVars.markers[i].type === "preschool") {
-      icon = imagepreschool;
-    }
-
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(
-        mapVars.markers[i].lat,
-        mapVars.markers[i].lon
-      ),
+  for (let i = 0; i < points.length; i++) {
+    const marker = new google.maps.Marker({
+      position: points[i].position,
+      icon: icons[points[i].type].icon,
+      label: {
+        text: points[i].number,
+        color: "white",
+        fontSize: "14px",
+        fontWeight: "bold",
+      },
       map: map,
-      icon: icon,
-    });
-
-    latlngbounds.extend(
-      new google.maps.LatLng(mapVars.markers[i].lat, mapVars.markers[i].lon)
-    );
-
-    addMarker(marker, mapVars.markers[i]);
-  }
-
-  if (mapVars.centerMap) {
-    map.fitBounds(latlngbounds);
-  }
-
- 
-
-  function addMarker(marker, item) {
-    var infowindow = new google.maps.InfoWindow({
-      content:
-        '<div class="map-popup"><h4 class="map-popup-title">' +
-        item.name +
-        "</h4>" +
-        item.link +
-        "</div>",
-    });
-
-    windows.push(infowindow);
-
-    marker.addListener("click", function () {
-      infowindow.open(map, marker);
-      closeWindow(infowindow);
     });
   }
+}
 
-  function closeWindow(window) {
-    for (var i = 0; i < windows.length; i++) {
-      if (window != windows[i]) {
-        windows[i].close();
-      }
-    }
-  }
-
-  $("html,body").on(
-    "click",
-    '[aria-label="Toggle fullscreen view"]',
-    function (e) {
-      e.stopPropagation();
-      $(this).toggleClass("is-fullscreen");
-    }
-  );
-});
+const points = [
+  {
+    position: new google.maps.LatLng(50.0851133, 14.5785705),
+    type: "info",
+    number: "30",
+  },
+  {
+    position: new google.maps.LatLng(49.2208457, 16.6536349),
+    type: "info",
+    number: "16",
+  },
+  {
+    position: new google.maps.LatLng(49.2276272, 17.6703409),
+    type: "info",
+    number: "16",
+  },
+  {
+    position: new google.maps.LatLng(49.2034397, 17.541245),
+    type: "info",
+    number: "3",
+  },
+];

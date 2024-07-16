@@ -16,11 +16,21 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      gap: 16px;
+    }
     .hpSearch-form__input {
       width: 34rem;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
     }
     form {
       margin: 0;
+      @include media-breakpoint-down(md) {
+        max-width: 100% !important;
+      }
     }
   }
 
@@ -55,5 +65,33 @@
         text-decoration-color: inherit;
       }
     }
+  }
+}
+#map-canvas {
+  overflow: initial !important;
+  height: 100%;
+  width: 100%;
+}
+.map-wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 480px;
+  position: relative;
+  margin-bottom: 32px;
+}
+.map {
+  iframe {
+    display: block;
+    width: 100%;
+  }
+}
+div[title=""][role="img"] {
+  width: 66px !important;
+  height: 66px !important;
+  background-size: cover;
+  border-radius: 100%;
+  img {
+    width: 100% !important;
+    height: 100% !important;
   }
 }

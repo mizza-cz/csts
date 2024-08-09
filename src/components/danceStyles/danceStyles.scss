@@ -1,0 +1,11 @@
+.danceStyles {
+  padding-bottom: 80px;
+  @include media-breakpoint-down(xl) {
+    padding-bottom: 40px;
+  }
+  .hpSlider__item {
+    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 400/267;
+  }
+}

@@ -211,6 +211,10 @@
   font-family: "Playfair Display", serif;
   display: block;
   letter-spacing: 0.5px;
+  @include media-breakpoint-down(lg) {
+    font-size: 22px;
+    line-height: 1.4;
+  }
 }
 .o-content h4,
 .h4 {
@@ -218,6 +222,10 @@
   font-size: 20px;
   line-height: 1.6;
   font-family: "Playfair Display", serif;
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 
 .o-content h6,
@@ -231,4 +239,9 @@
   @include media-breakpoint-down(xl) {
     padding-bottom: 40px;
   }
+}
+.p1 {
+  font-size: 18px;
+  line-height: 1.778;
+  color: var(--color-dark);
 }

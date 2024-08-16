@@ -1,0 +1,55 @@
+{% extends "@components/base/base.twig" %} {% set title =
+"10.0_contacts-division" %} {% block main %}
+<div class="base__wrapper">
+  <div class="row">
+    <div class="col-xxl-8">
+      <div class="header-top">
+        <a href="#" class="header__logo">
+          <img src="images/ico/logo.svg" alt="logo" />
+        </a>
+        <ul class="header-top__list">
+          <li>
+            <a href="#">ČESKÝ SVAZ TANEČNÍHO SPORTU</a>
+          </li>
+
+          <li>
+            <a href="#">ČLEN ČOV</a>
+          </li>
+        </ul>
+        <ul class="header-top__links">
+          <li>
+            <a href="#"><img src="images/ico/home.svg" alt="CSTS" /> CSTS.CZ</a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/ico/heart.svg" alt="INZERCE" /> INZERCE</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/shop.svg" alt="E-SHOP" /> E-SHOP
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/trophy.svg" alt="SOUTĚŽE A VÝSLEDKY" />
+              SOUTĚŽE A VÝSLEDKY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12">{% include "@components/header/header.twig" %}</div>
+    {% include "@components/menuNews/menuNews-2.twig" %}
+  </div>
+  <div class="container">
+    <div class="headerPage">
+      <h1 class="h1">Kontakt</h1>
+    </div>
+  </div>
+</div>
+<main class="main" aria-label="Hlavní obsah">
+  {% include "@components/contactsDivision/contactsDivision.twig" %}
+</main>
+
+{% endblock %}

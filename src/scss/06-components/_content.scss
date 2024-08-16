@@ -245,3 +245,11 @@
   line-height: 1.778;
   color: var(--color-dark);
 }
+
+.static-section{
+  .hpSlider__item {
+    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 400/267;
+  }
+}

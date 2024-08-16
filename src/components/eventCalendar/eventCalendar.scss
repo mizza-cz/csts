@@ -1,0 +1,80 @@
+.eventCalendar {
+  margin-bottom: 80px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 40px;
+  }
+  &__bottom {
+    padding-bottom: 80px;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 40px;
+    }
+  }
+  &__table {
+    border: 1px solid var(--color-slate-200);
+    border-radius: 8px;
+    table {
+      width: 100%;
+
+      border-collapse: collapse;
+    }
+    tr:nth-child(even) {
+      background-color: var(--color-slate-50);
+    }
+    tr:last-child td {
+      border: none;
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--color-slate-200);
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+    .nomination {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-violet-950);
+      text-decoration-color: transparent;
+      justify-content: flex-end;
+      &:hover {
+        text-decoration-color: inherit;
+      }
+    }
+    .state {
+      display: flex;
+      gap: 8px;
+      line-height: 100%;
+      span {
+        margin-top: 6px;
+      }
+      img {
+        width: 20px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: var(--color-violet-950);
+      font-size: 20px;
+      line-height: 1.4;
+      text-decoration-color: transparent;
+      @include media-breakpoint-down(lg) {
+        gap: 0;
+        img {
+          display: none;
+        }
+      }
+      &:hover {
+        text-decoration-color: inherit;
+      }
+    }
+  }
+}

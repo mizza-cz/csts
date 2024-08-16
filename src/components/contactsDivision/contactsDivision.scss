@@ -1,0 +1,41 @@
+.contactsDivision {
+  padding-bottom: 80px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 40px;
+  }
+  &__box {
+    border-radius: 8px;
+    border: 1px solid var(--color-slate-200);
+  }
+  &__item {
+    padding: 16px;
+
+    .h4 {
+      color: var(--color-violet-950);
+      text-decoration-color: transparent;
+      display: block;
+      &:hover {
+        text-decoration-color: inherit;
+      }
+    }
+    span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--color-slate-500);
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+  }
+  &__item:not(:last-child) {
+    border-bottom: 1px solid var(--color-slate-200);
+  }
+  &__item:nth-child(even) {
+    background-color: var(--color-slate-50);
+  }
+}

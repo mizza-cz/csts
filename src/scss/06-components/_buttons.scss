@@ -1,0 +1,19 @@
+.btn {
+  color: var(--color-light);
+  background-color: var(--color-violet-950);
+  height: 64px;
+  border: none;
+  max-width: 144px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 16px;
+  display: block;
+  @include media-breakpoint-down(md) {
+    //  max-width: 100%;
+  }
+  &:hover {
+    color: var(--color-light);
+    background-color: var(--color-violet-600);
+  }
+}

@@ -1,0 +1,25 @@
+.gallery {
+  padding-bottom: 80px;
+  &__items {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
+    padding: 0 20px;
+    display: block;
+    margin-bottom: 40px;
+    @include media-breakpoint-only(lg) {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      flex: 100%;
+      margin-bottom: 32px;
+    }
+  }
+}

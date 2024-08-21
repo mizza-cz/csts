@@ -64,6 +64,10 @@
     margin-bottom: 16px;
     display: block;
     text-decoration-color: transparent;
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
     &:hover {
       text-decoration-color: inherit;
     }

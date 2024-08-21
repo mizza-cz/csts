@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>search</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Archiv-článků" transform="translate(-336, -340)">
+            <g id="search" transform="translate(336, 340)">
+                <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M3,9.9999999 C3,12.5008592 4.33419242,14.8117483 6.5,16.0621779 C8.66580752,17.3126075 11.3341925,17.3126075 13.5,16.0621779 C15.6658076,14.8117483 17,12.5008592 17,9.9999999 C17,7.49914085 15.6658076,5.18825167 13.5,3.93782209 C11.3341925,2.6873925 8.66580752,2.6873925 6.5,3.93782209 C4.33419242,5.18825167 3,7.49914085 3,9.9999999" id="Path" stroke="#2E1065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <line x1="21" y1="21" x2="15" y2="15" id="Path" stroke="#2E1065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

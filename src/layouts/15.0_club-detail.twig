@@ -1,0 +1,169 @@
+{% extends "@components/base/base.twig" %} {% set title = "15.0_club-detail" %}
+{% block main %}
+<div class="base__wrapper">
+  <div class="row">
+    <div class="col-xxl-8">
+      <div class="header-top">
+        <a href="#" class="header__logo">
+          <img src="images/ico/logo.svg" alt="logo" />
+        </a>
+        <ul class="header-top__list">
+          <li>
+            <a href="#">ČESKÝ SVAZ TANEČNÍHO SPORTU</a>
+          </li>
+
+          <li>
+            <a href="#">ČLEN ČOV</a>
+          </li>
+        </ul>
+        <ul class="header-top__links">
+          <li>
+            <a href="#"><img src="images/ico/home.svg" alt="CSTS" /> CSTS.CZ</a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/ico/heart.svg" alt="INZERCE" /> INZERCE</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/shop.svg" alt="E-SHOP" /> E-SHOP
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/trophy.svg" alt="SOUTĚŽE A VÝSLEDKY" />
+              SOUTĚŽE A VÝSLEDKY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12">{% include "@components/header/header.twig" %}</div>
+    {% include "@components/menuNews/menuNews-2.twig" %}
+  </div>
+  <div class="container">
+    <div class="headerPage">
+      <h1 class="h1">Partneři</h1>
+    </div>
+  </div>
+</div>
+<main class="main" aria-label="Hlavní obsah">
+  <section class="clubDetail-section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-xl-8 mt-4">
+          {% include "@components/clubDetail/clubDetail.twig" %}
+          <div class="o-content">
+            <h2>O klubu</h2>
+            <p>
+              StandardKlub Praha je taneční škola, ve které se potkávají
+              tanečníci od začátečníků až po profesionály, a to ve všech
+              věkových kategoriích. Zaměřujeme se na sportovní tance, konkrétně:
+              standardní tance: waltz, tango, valčík, slowfox, quickstep,
+              latinskoamerické tance: samba, rumba, cha-cha, paso doble, jive.
+              Vedle přípravy párů se zaměřujeme i na taneční formace. Jsme
+              registrováni v Českém svazu tanečního sportu (ČSTS).
+            </p>
+            <h2>Náborové tréninky</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quidem, expedita ipsam aperiam repudiandae odio qui distinctio
+              sunt quaerat minima, vel impedit consectetur a rerum debitis nulla
+              dolore molestiae perferendis? Expedita aspernatur impedit magni!
+              Iste dolor cupiditate porro architecto perspiciatis minus
+              laudantium error. Labore debitis expedita sapiente officiis earum
+              culpa? Aliquid doloremque culpa illo, soluta error hic eveniet
+              porro numquam. Totam dolores unde magni odit. Voluptatem,
+              veritatis distinctio temporibus saepe iusto maiores enim eveniet
+              nam ab consequatur aut cupiditate inventore perferendis
+              aspernatur. Unde quasi rem repellat perferendis, aut hic culpa!
+              Repellendus qui neque fugit repudiandae reprehenderit? Reiciendis
+            </p>
+          </div>
+          <div class="article-posts mt-5">
+            <div class="row">
+              <div class="g-5 gy-3 mx-auto mt-0">
+                <div class="row gx-5 gy-5">
+                  <div class="col-12">
+                    <h3 class="h2">Související články</h3>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="topstory__news">
+                      <div class="tag tag--blue">ČSTS</div>
+                      <a href="#">Nový seriál rozhovorů: Time To Talk</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="topstory__news">
+                      <div class="tag tag--pink">POJĎ TANČIT</div>
+                      <a href="#">Beseda: Motivace dětí ke sportu</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="topstory__news">
+                      <div class="tag tag--teal">KLUBY</div>
+                      <a href="#"
+                        >100. výročí založení prvního tanečního klubu</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="topstory__news">
+                      <div class="tag tag--blue">ČSTS</div>
+                      <a href="#">Nový seriál rozhovorů: Time To Talk</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="topstory__news">
+                      <div class="tag tag--pink">POJĎ TANČIT</div>
+                      <a href="#">Beseda: Motivace dětí ke sportu</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="topstory__news">
+                      <div class="tag tag--teal">KLUBY</div>
+                      <a href="#"
+                        >100. výročí založení prvního tanečního klubu</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn ms-auto mt-5">Další články</a>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="col-12">
+            <aside class="aside">
+              <h3 class="h4 mb-3">Divize</h3>
+              <ul class="aside__menu">
+                <li>
+                  <a class="active" href="#">Pražská divize</a>
+                </li>
+                <li>
+                  <a href="#">Středočeská divize </a>
+                </li>
+                <li>
+                  <div class=" ">Jihočeská divize</div>
+                </li>
+                <li>
+                  <a href="#">Plzeňská divize </a>
+                </li>
+                <li>
+                  <a href="#">Karlovarská divize </a>
+                </li>
+                <li>
+                  <a href="#">Ústecká divize</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

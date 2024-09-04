@@ -48,6 +48,7 @@
   &__info {
     max-width: 21rem;
     padding-top: 8px;
+    width: 100%;
     @include media-breakpoint-down(xl) {
       max-width: 100%;
     }

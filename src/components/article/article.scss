@@ -35,6 +35,7 @@
     height: auto;
     aspect-ratio: 950/633;
     margin-bottom: -400px;
+    max-width: 100%;
     @include media-breakpoint-down(lg) {
       margin-bottom: 0;
     }

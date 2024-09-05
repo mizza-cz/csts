@@ -67,8 +67,8 @@
   aspect-ratio: 950/120;
   height: auto;
   margin-bottom: 40px;
-  @include media-breakpoint-down(lg) {
-    //  aspect-ratio: 351/177;
+  @include media-breakpoint-down(md) {
+    aspect-ratio: 320/320;
   }
   img {
     width: 100%;

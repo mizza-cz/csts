@@ -1,0 +1,136 @@
+{% extends "@components/base/base.twig" %} {% set title = "16.0_test" %} {%
+block main %}
+<div class="base__wrapper">
+  <div class="row">
+    <div class="col-12">
+      <div class="header-top">
+        <a href="#" class="header__logo">
+          <img src="images/ico/logo.svg" alt="logo" />
+        </a>
+        <ul class="header-top__list">
+          <li>
+            <a href="#">ČESKÝ SVAZ TANEČNÍHO SPORTU</a>
+          </li>
+
+          <li>
+            <a href="#">ČLEN ČOV</a>
+          </li>
+        </ul>
+        <ul class="header-top__links">
+          <li>
+            <a href="#"><img src="images/ico/home.svg" alt="CSTS" /> CSTS.CZ</a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/ico/heart.svg" alt="INZERCE" /> INZERCE</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/shop.svg" alt="E-SHOP" /> E-SHOP
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/ico/trophy.svg" alt="SOUTĚŽE A VÝSLEDKY" />
+              SOUTĚŽE A VÝSLEDKY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12">{% include "@components/header/header.twig" %}</div>
+    {% include "@components/menuNews/menuNews-2.twig" %}
+  </div>
+  <div class="container">
+    <div class="headerPage">
+      <h1 class="h1">Stránka</h1>
+    </div>
+  </div>
+</div>
+<main class="main" aria-label="Hlavní obsah">
+  <section class="static-section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-xl-8 mt-4">
+          <div class="o-content">
+            <div id="accordion" class="accordion">
+              <div class="accordion-item">
+                <h2 id="heading0" class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse0"
+                    aria-expanded="false"
+                    aria-controls="collapse0"
+                  >
+                    První položka FAQ
+                  </button>
+                </h2>
+                <div
+                  id="collapse0"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading0"
+                  data-bs-parent="#accordion"
+                >
+                  <div class="accordion-body">
+                    Obsah textový, <strong>tučný text</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 id="heading1" class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="false"
+                    aria-controls="collapse1"
+                  >
+                    Druhá položka
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading1"
+                  data-bs-parent="#accordion"
+                >
+                  <div class="accordion-body">
+                    obsah opět <strong>Tučný</strong> a <u>podtržený</u>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-5 mt-4">
+              <div class="col-md-6">
+                <div class="contactItem">
+                  <div class="contactItem__box">
+                    <div class="contactItem__img">
+                      <img src="/images/content/ava.png" alt="avatar" />
+                    </div>
+                    <div class="contactItem__info">
+                      <h5 class="h4">Petr Rychlý ředitel</h5>
+                      <ul class="contactItem__contacts">
+                        <li class="contact-email">
+                          <a href="mailto:email@tanec.cz">email@tanec.cz</a>
+                        </li>
+                        <li class="contact-phone">888777666</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="contactItem__bottom">
+                    <p>Textová popiska kontaktu do spodní části boxu.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -3,6 +3,9 @@
   z-index: 2;
   margin: 0 auto;
   z-index: 999;
+  @include media-breakpoint-down(xxl) {
+    z-index: 997;
+  }
   .header-top__links {
     display: none;
     @include media-breakpoint-down(xxl) {
@@ -228,6 +231,7 @@
 .nav-item {
   padding-top: 24px;
   padding-bottom: 24px;
+  position: relative;
   @include media-breakpoint-down(xxl) {
     width: 100%;
     padding-top: 8px;
@@ -450,7 +454,6 @@
   background-color: #f7f8f9;
   top: 98%;
   left: -20px;
-  z-index: 20;
   float: left;
   min-width: 320px;
   margin: 0 0;

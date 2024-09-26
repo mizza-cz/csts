@@ -79,7 +79,7 @@
       object-fit: contain;
     }
   }
-  &__btnnext {
+  &__btnprev {
     left: 24px;
     @include media-breakpoint-down(lg) {
       left: 12px;
@@ -88,7 +88,7 @@
       transform: scale(1.1);
     }
   }
-  &__btnprev {
+  &__btnnext {
     right: 24px;
     transform: rotate(-180deg);
     @include media-breakpoint-down(lg) {

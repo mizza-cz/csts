@@ -98,6 +98,7 @@
       font-size: 20px;
       line-height: 1.4;
       text-decoration-color: transparent;
+      font-family: "Playfair Display", serif;
       @include media-breakpoint-down(lg) {
         gap: 0;
         img {

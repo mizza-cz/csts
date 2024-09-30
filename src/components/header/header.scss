@@ -423,6 +423,12 @@
 }
 
 .is-openNew {
+  .header {
+    z-index: 996;
+  }
+  .header__logo {
+    z-index: 997;
+  }
   .menuNews {
     display: block !important;
     position: fixed;
@@ -434,7 +440,7 @@
     padding-right: 24px;
     overflow-y: scroll;
     height: 100vh;
-    z-index: 999;
+    z-index: 99999;
   }
   .menuNewsBtn {
     display: flex;

@@ -3,11 +3,7 @@
   @include media-breakpoint-down(xl) {
     margin-bottom: 32px;
   }
-  .col-lg-6 {
-    @include media-breakpoint-down(lg) {
-      display: none;
-    }
-  }
+
   &__item {
     width: 100%;
     aspect-ratio: 620/310;

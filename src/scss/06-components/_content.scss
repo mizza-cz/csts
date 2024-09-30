@@ -50,11 +50,11 @@
       border-bottom: 1px solid var(--color-slate-200);
       padding-bottom: 8px;
       margin-bottom: 8px;
-      aP &::before {
+      &::before {
         content: "";
         background-color: var(--color-violet-950);
         position: absolute;
-        top: 10px;
+        top: 11px;
         left: 0;
         width: 6px;
         height: 6px;
@@ -71,6 +71,7 @@
     a {
       display: block;
       text-decoration-color: transparent;
+      color: var(--color-slate-950);
       &:hover {
         text-decoration-color: inherit;
       }

@@ -69,13 +69,13 @@
   margin-bottom: 40px;
   &-desc {
     @include media-breakpoint-down(lg) {
-      display: none;
+      display: none !important;
     }
   }
   &-mob {
-    display: none;
+    display: none !important;
     @include media-breakpoint-down(lg) {
-      display: block;
+      display: block !important;
     }
   }
   img {

@@ -510,9 +510,17 @@
 }
 .nav-item.dropdown:hover {
   .dropdown-menu {
+    @include media-breakpoint-down(xxl) {
+      display: none !important;
+    }
     display: flex;
     visibility: visible;
     flex-direction: column;
+  }
+  .dropdown-menu.show {
+    @include media-breakpoint-down(xxl) {
+      display: flex !important;
+    }
   }
 }
 .dropdown-item {

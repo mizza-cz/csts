@@ -67,6 +67,17 @@
   aspect-ratio: 950/120;
   height: auto;
   margin-bottom: 40px;
+  &-desc {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  &-mob {
+    display: none;
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
   img {
     width: 100%;
     height: auto;

@@ -50,6 +50,10 @@
     height: 24px;
     background-size: cover;
     background-repeat: no-repeat;
+    @include media-breakpoint-down(md) {
+      top: 27px;
+      transform: none;
+    }
   }
   @include media-breakpoint-down(md) {
     flex-direction: column;

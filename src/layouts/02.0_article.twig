@@ -20,7 +20,7 @@ block main %}
           <li>
             <a href="#"><img src="images/ico/home.svg" alt="CSTS" /> CSTS.CZ</a>
           </li>
-         
+
           <li>
             <a href="#">
               <img src="images/ico/shop.svg" alt="E-SHOP" /> E-SHOP
@@ -41,7 +41,13 @@ block main %}
   {% include "@components/article/article.twig" %}
 </div>
 <main class="main" aria-label="Hlavní obsah">
-  {% include "@components/article-detail/article-detail.twig" %}
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-10">
+        {% include "@components/article-detail/article-detail.twig" %}
+      </div>
+    </div>
+  </div>
 </main>
 
 {% endblock %}

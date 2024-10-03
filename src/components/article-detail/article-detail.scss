@@ -57,9 +57,15 @@
       padding: 1px;
       max-width: 25%;
       flex: 0 0 25%;
+      padding-left: 1px !important;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
       @include media-breakpoint-down(md) {
         max-width: 50%;
         flex: 0 0 50%;
+      }
+      &::before {
+        display: none;
       }
     }
   }

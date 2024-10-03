@@ -1,10 +1,14 @@
 .header {
   position: relative;
-  z-index: 2;
   margin: 0 auto;
   z-index: 999;
   @include media-breakpoint-down(xxl) {
     z-index: 997;
+  }
+  .container {
+    @include media-breakpoint-down(xxl) {
+      padding: 0 !important;
+    }
   }
   .header-top__links {
     display: none;
@@ -206,7 +210,6 @@
 .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   margin-right: 40px;
   flex-wrap: wrap;
   @media (max-width: 1720px) {

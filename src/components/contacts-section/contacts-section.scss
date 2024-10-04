@@ -67,3 +67,13 @@
     }
   }
 }
+.contact-email a {
+  text-decoration-color: inherit !important;
+  color: var(--color-violet-950);
+  &:hover {
+    text-decoration-color: transparent !important;
+  }
+}
+.contact-phone {
+  color: var(--color-dark);
+}
